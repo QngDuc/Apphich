@@ -12,7 +12,7 @@ CÔNG NGHỆ (MIỄN PHÍ): Next.js + Tailwind CSS + Supabase + Vercel
 [x] GIAI ĐOẠN 2: THIẾT KẾ CƠ SỞ DỮ LIỆU (DATABASE)
     [x] Tạo bảng `movies` (Cột: id, title, description, thumbnail_url, video_url, category).
     [x] Tạo bảng `watch_list` để lưu danh sách phim yêu thích của user.
-    [ ] Bật tính năng Authentication trên Supabase (Đăng nhập bằng Email/Password hoặc Google).
+    [x] Bật tính năng Authentication trên Supabase (Đăng nhập bằng Email/Password hoặc Google).
     [x] Fake data: Thêm thử 5-10 bộ phim vào bảng `movies` bằng link ảnh/video ngoài.
 
 [ ] GIAI ĐOẠN 3: LẬP TRÌNH GIAO DIỆN (FRONTEND)
