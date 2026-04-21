@@ -1,0 +1,37 @@
+TODO LIST - DỰ ÁN WEB XEM PHIM (NETFLIX CLONE)
+==============================================
+CÔNG NGHỆ (MIỄN PHÍ): Next.js + Tailwind CSS + Supabase + Vercel
+
+[x] GIAI ĐOẠN 1: KHỞI TẠO & CÀI ĐẶT
+    [x] Chạy lệnh tạo dự án: npx create-next-app@latest
+    [x] Cài đặt thư viện hỗ trợ: lucide-react (lấy icon), tailwind-scrollbar-hide (ẩn thanh cuộn).
+    [x] Dọn dẹp code rác mặc định, thiết lập cấu trúc folder chuẩn.
+    [x] Tạo tài khoản và project mới trên Supabase (supabase.com).
+    [x] Lấy API URL và API Key từ Supabase lưu vào file `.env.local`.
+
+[x] GIAI ĐOẠN 2: THIẾT KẾ CƠ SỞ DỮ LIỆU (DATABASE)
+    [x] Tạo bảng `movies` (Cột: id, title, description, thumbnail_url, video_url, category).
+    [x] Tạo bảng `watch_list` để lưu danh sách phim yêu thích của user.
+    [x] Bật tính năng Authentication trên Supabase (Đăng nhập bằng Email/Password hoặc Google).
+    [x] Fake data: Thêm thử 5-10 bộ phim vào bảng `movies` bằng link ảnh/video ngoài.
+
+[x] GIAI ĐOẠN 3: LẬP TRÌNH GIAO DIỆN (FRONTEND)
+    [ ] CODE Navbar: Chuyển màu từ trong suốt sang đen khi cuộn trang.
+    [ ] CODE HeroBanner: Lấy 1 phim ngẫu nhiên từ DB làm banner to, có nút "Play".
+    [ ] CODE Row & MovieCard: Đổ danh sách phim ra thành từng hàng ngang (Trending, Action, Comedy...).
+    [ ] CODE Trang Auth: Form đăng nhập/đăng ký giao diện tối màu giống Netflix.
+    [ ] CODE VideoPlayer: Giao diện phát video (ẩn thanh điều hướng, full màn hình).
+
+[ ] GIAI ĐOẠN 4: GHÉP NỐI CHỨC NĂNG (LOGIC)
+    [ ] Làm chức năng đăng ký, đăng nhập, đăng xuất qua Supabase Auth.
+    [ ] Viết hàm lấy danh sách phim từ bảng `movies` và hiển thị lên màn hình `browse`.
+    [ ] Viết chức năng click vào MovieCard -> mở Modal thông tin phim -> bấm Play chuyển sang `/watch`.
+    [ ] Làm tính năng "My List": Nút (+) để thêm phim vào danh sách cá nhân.
+
+[ ] GIAI ĐOẠN 5: HOÀN THIỆN & ĐƯA LÊN MẠNG (DEPLOY)
+    [ ] Kiểm tra lỗi hiển thị trên điện thoại (Responsive UI).
+    [ ] Đẩy toàn bộ mã nguồn lên GitHub.
+    [ ] Tạo tài khoản Vercel (vercel.com), liên kết với GitHub.
+    [ ] Import kho chứa (repository) của dự án.
+    [ ] Thêm các biến môi trường từ `.env.local` vào phần Environment Variables trên Vercel.
+    [ ] Bấm Deploy và nhận link website miễn phí.
