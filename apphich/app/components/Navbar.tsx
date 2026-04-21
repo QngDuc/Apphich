@@ -26,7 +26,7 @@ export default function Navbar() {
           {/* Right Actions */}
           <div className="flex items-center gap-4">
             {/* Search Button */}
-            <button className="rounded-lg p-2 transition hover:bg-netflix-black-lighter">
+            <button title="Tìm kiếm" className="rounded-lg p-2 transition hover:bg-netflix-black-lighter">
               <svg
                 className="h-5 w-5 text-netflix-gray-light"
                 fill="none"
@@ -43,7 +43,7 @@ export default function Navbar() {
             </button>
 
             {/* Profile Button */}
-            <button className="rounded-lg p-2 transition hover:bg-netflix-black-lighter">
+            <button title="Hồ sơ" className="rounded-lg p-2 transition hover:bg-netflix-black-lighter">
               <svg
                 className="h-5 w-5 text-netflix-gray-light"
                 fill="none"

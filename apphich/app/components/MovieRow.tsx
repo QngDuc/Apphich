@@ -36,6 +36,7 @@ export default function MovieRow({ title, movies }: MovieRowProps) {
         {/* Left Arrow */}
         <button
           onClick={() => scroll("left")}
+          title="Cuộn sang trái"
           className="absolute -left-12 top-1/2 z-40 hidden -translate-y-1/2 rounded-full bg-black/50 p-2 transition hover:bg-black/75 group-hover:flex"
         >
           <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +52,6 @@ export default function MovieRow({ title, movies }: MovieRowProps) {
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}
-              id={movie.id}
               title={movie.title}
               thumbnailUrl={movie.thumbnailUrl}
               rating={movie.rating}
@@ -62,6 +62,7 @@ export default function MovieRow({ title, movies }: MovieRowProps) {
         {/* Right Arrow */}
         <button
           onClick={() => scroll("right")}
+          title="Cuộn sang phải"
           className="absolute -right-12 top-1/2 z-40 hidden -translate-y-1/2 rounded-full bg-black/50 p-2 transition hover:bg-black/75 group-hover:flex"
         >
           <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

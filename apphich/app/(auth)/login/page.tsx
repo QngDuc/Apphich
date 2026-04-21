@@ -61,13 +61,7 @@ export default function LoginPage() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-netflix">
       {/* Background with gradient overlay */}
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-netflix-red/20 to-netflix-black opacity-80"
-        style={{
-          backgroundImage:
-            "linear-gradient(135deg, rgba(229, 9, 20, 0.1) 0%, rgba(20, 20, 20, 0.9) 100%)",
-        }}
-      />
+      <div className="absolute inset-0 bg-linear-to-br from-netflix-red/20 to-netflix-black opacity-80" />
 
       {/* Main container */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -90,7 +84,7 @@ export default function LoginPage() {
             {error && (
               <div className="mb-6 flex items-center gap-3 rounded-lg bg-red-500/20 px-4 py-3 text-red-300">
                 <svg
-                  className="h-5 w-5 flex-shrink-0"
+                  className="h-5 w-5 shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

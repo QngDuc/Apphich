@@ -8,22 +8,24 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({
-  id,
   title,
   thumbnailUrl,
   rating,
-}: MovieCardProps) {
+}: Omit<MovieCardProps, 'id'>) {
   return (
-    <div className="group relative h-60 w-40 flex-shrink-0 cursor-pointer overflow-hidden rounded-lg bg-netflix-black-lighter transition hover:z-50 hover:scale-110">
-      {/* Image */}
-      <img
-        src={thumbnailUrl}
-        alt={title}
-        className="h-full w-full object-cover transition group-hover:brightness-75"
+    <div className="group relative h-60 w-40 shrink-0 cursor-pointer overflow-hidden rounded-lg bg-netflix-black-lighter transition hover:z-50 hover:scale-110">
+      {/* Image - using inline style for dynamic background */}
+      <div
+        className="h-full w-full bg-cover bg-center transition group-hover:brightness-75"
+        style={{
+          backgroundImage: `url('${thumbnailUrl}')`,
+        }}
+        role="img"
+        aria-label={title}
       />
 
       {/* Overlay on hover */}
-      <div className="absolute inset-0 flex flex-col items-end justify-end bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 transition group-hover:opacity-100">
+      <div className="absolute inset-0 flex flex-col items-end justify-end bg-linear-to-t from-black/90 via-black/30 to-transparent opacity-0 transition group-hover:opacity-100">
         {/* Title */}
         <div className="w-full p-4">
           <h3 className="line-clamp-2 text-sm font-bold text-white">{title}</h3>
@@ -43,7 +45,10 @@ export default function MovieCard({
             <button className="flex-1 rounded-md bg-netflix-red px-2 py-2 text-xs font-bold text-white transition hover:bg-netflix-red-dark">
               ▶ Phát
             </button>
-            <button className="rounded-md border border-netflix-gray-light px-2 py-2 transition hover:border-white hover:bg-netflix-black-light">
+            <button
+              title="Thêm vào danh sách"
+              className="rounded-md border border-netflix-gray-light px-2 py-2 transition hover:border-white hover:bg-netflix-black-light"
+            >
               <svg className="h-4 w-4 text-netflix-gray-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
