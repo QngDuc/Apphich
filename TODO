@@ -1,6 +1,7 @@
 TODO LIST - DỰ ÁN WEB XEM PHIM (NETFLIX CLONE)
 ==============================================
 CÔNG NGHỆ (MIỄN PHÍ): Next.js + Tailwind CSS + Supabase + Vercel
+STATUS: 65% Hoàn thành (UI đẹp, cần logic & backend)
 
 [x] GIAI ĐOẠN 1: KHỞI TẠO & CÀI ĐẶT
     [x] Chạy lệnh tạo dự án: npx create-next-app@latest
@@ -8,30 +9,53 @@ CÔNG NGHỆ (MIỄN PHÍ): Next.js + Tailwind CSS + Supabase + Vercel
     [x] Dọn dẹp code rác mặc định, thiết lập cấu trúc folder chuẩn.
     [x] Tạo tài khoản và project mới trên Supabase (supabase.com).
     [x] Lấy API URL và API Key từ Supabase lưu vào file `.env.local`.
+    [x] Tạo git repository và push lên GitHub.
 
 [x] GIAI ĐOẠN 2: THIẾT KẾ CƠ SỞ DỮ LIỆU (DATABASE)
-    [x] Tạo bảng `movies` (Cột: id, title, description, thumbnail_url, video_url, category).
+    [x] Tạo bảng `movies` (Cột: id, title, description, thumbnail_url, video_url, category, rating, duration).
     [x] Tạo bảng `watch_list` để lưu danh sách phim yêu thích của user.
     [x] Bật tính năng Authentication trên Supabase (Đăng nhập bằng Email/Password hoặc Google).
-    [x] Fake data: Thêm thử 5-10 bộ phim vào bảng `movies` bằng link ảnh/video ngoài.
+    [x] Thêm 10+ bộ phim vào bảng `movies`.
+    [ ] Tạo bảng `user_profiles` để lưu thông tin user (name, avatar, preferences).
+    [ ] Tạo bảng `reviews` để lưu bài đánh giá & bình luận phim (optional).
 
 [x] GIAI ĐOẠN 3: LẬP TRÌNH GIAO DIỆN (FRONTEND)
-    [ ] CODE Navbar: Chuyển màu từ trong suốt sang đen khi cuộn trang.
-    [ ] CODE HeroBanner: Lấy 1 phim ngẫu nhiên từ DB làm banner to, có nút "Play".
-    [ ] CODE Row & MovieCard: Đổ danh sách phim ra thành từng hàng ngang (Trending, Action, Comedy...).
-    [ ] CODE Trang Auth: Form đăng nhập/đăng ký giao diện tối màu giống Netflix.
-    [ ] CODE VideoPlayer: Giao diện phát video (ẩn thanh điều hướng, full màn hình).
+    [x] CODE Navbar: Navigation bar với logo, search, profile menu.
+    [x] CODE HeroBanner: Banner to với ảnh phim, title, description, nút Play.
+    [x] CODE MovieCard: Card phim với ảnh, rating, nút play & add to list.
+    [x] CODE MovieRow: Row ngang scrollable hiển thị danh sách phim.
+    [x] CODE Trang Auth: Form đăng nhập/đăng ký giao diện Netflix.
+    [x] CODE VideoPlayer: Giao diện phát video với controls đầy đủ.
+    [x] CODE Browse Page: Trang chủ với featured movie + rows phim theo category.
+    [x] Fix accessibility & Tailwind compatibility issues.
 
-[ ] GIAI ĐOẠN 4: GHÉP NỐI CHỨC NĂNG (LOGIC)
-    [ ] Làm chức năng đăng ký, đăng nhập, đăng xuất qua Supabase Auth.
-    [ ] Viết hàm lấy danh sách phim từ bảng `movies` và hiển thị lên màn hình `browse`.
-    [ ] Viết chức năng click vào MovieCard -> mở Modal thông tin phim -> bấm Play chuyển sang `/watch`.
-    [ ] Làm tính năng "My List": Nút (+) để thêm phim vào danh sách cá nhân.
+[ ] GIAI ĐOẠN 4: GHÉP NỐI CHỨC NĂNG & LOGIC
+    [x] Làm chức năng đăng ký & đăng nhập qua Supabase Auth.
+    [ ] Làm chức năng đăng xuất (logout button ở profile menu).
+    [ ] Tạo middleware để bảo vệ routes (`/browse`, `/watch` chỉ cho đã đăng nhập).
+    [ ] Viết API function lấy danh sách phim từ DB và hiển thị trên browse page.
+    [ ] Viết function ngẫu nhiên chọn phim làm HeroBanner.
+    [ ] Tạo trang chi tiết phim (`/watch/[id]`) với info đầy đủ + video player.
+    [ ] Làm chức năng "My List": Click (+) button thêm phim vào watch_list.
+    [ ] Tạo trang "My List" hiển thị các phim đã lưu.
+    [ ] Tạo trang "Search Results" với tìm kiếm full-text từ Supabase.
+    [ ] Thêm loading states & error handling (toast notifications).
+    [ ] Thêm empty states (khi chưa có data).
 
-[ ] GIAI ĐOẠN 5: HOÀN THIỆN & ĐƯA LÊN MẠNG (DEPLOY)
-    [ ] Kiểm tra lỗi hiển thị trên điện thoại (Responsive UI).
-    [ ] Đẩy toàn bộ mã nguồn lên GitHub.
-    [ ] Tạo tài khoản Vercel (vercel.com), liên kết với GitHub.
-    [ ] Import kho chứa (repository) của dự án.
-    [ ] Thêm các biến môi trường từ `.env.local` vào phần Environment Variables trên Vercel.
-    [ ] Bấm Deploy và nhận link website miễn phí.
+[ ] GIAI ĐOẠN 5: TÍNH NĂNG NÂNG CAO (OPTIONAL)
+    [ ] Thêm filter phim theo category, rating, duration.
+    [ ] Thêm recommendations dựa trên watch history.
+    [ ] Thêm system bình luận/đánh giá phim (reviews & ratings).
+    [ ] Dark/Light mode toggle (hiện tại chỉ có dark mode).
+    [ ] Lưu continue watching để resume từ điểm dừng.
+    [ ] Trailers support (preview phim trước khi xem).
+
+[ ] GIAI ĐOẠN 6: KIỂM TRA & DEPLOY
+    [ ] Test responsive trên điện thoại (mobile, tablet, desktop).
+    [ ] Test performance (Lighthouse score > 90).
+    [ ] Fix security issues (SQL injection, XSS protection).
+    [ ] Test tất cả features: login, search, play video, add to list.
+    [ ] Setup environment variables trên Vercel.
+    [ ] Deploy lên Vercel.
+    [ ] Test lại trên production link.
+    [ ] Setup custom domain (optional).
