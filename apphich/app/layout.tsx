@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Áp phích - Xem phim miễn phí",
-  description: "Web xem phim miễn phí",
+  description: "Web xem phim miễn phí - Bản clone của Netflix",
 };
 
 export default function RootLayout({
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
-      <body className={inter.className}>
+    <html lang="vi" className="dark">
+      <body className={`${inter.className} bg-[#141414] text-[#e5e5e5]`}>
         {children}
       </body>
     </html>
