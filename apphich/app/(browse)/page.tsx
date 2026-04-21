@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
-import HeroBanner from "./components/HeroBanner";
-import MovieRow from "./components/MovieRow";
+import Navbar from "../components/Navbar";
+import HeroBanner from "../components/HeroBanner";
+import MovieRow from "../components/MovieRow";
 
 // Mock data - Thay đổi thành data từ Supabase sau
 const featuredMovie = {
