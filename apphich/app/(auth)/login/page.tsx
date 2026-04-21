@@ -62,7 +62,6 @@ export default function LoginPage() {
     <div className="relative min-h-screen w-full overflow-hidden bg-netflix">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-br from-netflix-red/20 to-netflix-black opacity-80" />
-
       {/* Main container */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md">
