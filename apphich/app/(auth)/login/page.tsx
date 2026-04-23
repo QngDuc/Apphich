@@ -69,7 +69,7 @@ export default function LoginPage() {
           <div className="mb-10 text-center">
             <h1 className="text-4xl font-bold text-netflix-red">Áp Phích</h1>
             <p className="mt-2 text-sm text-netflix-gray-medium">
-              Xem phim miễn phí - Netflix Clone
+              Xem phim miễn phí - Make It Free
             </p>
           </div>
 
@@ -181,7 +181,7 @@ export default function LoginPage() {
 
           {/* Footer */}
           <div className="mt-8 text-center text-xs text-netflix-gray-medium">
-            <p>© 2024 Áp Phích - Netflix Clone Project</p>
+            <p>© 2024 Áp Phích - Make It Free</p>
           </div>
         </div>
       </div>
