@@ -1,17 +1,12 @@
 "use client";
 
 interface MovieCardProps {
-  id: string;
   title: string;
   thumbnailUrl: string;
   rating: number;
 }
 
-export default function MovieCard({
-  title,
-  thumbnailUrl,
-  rating,
-}: Omit<MovieCardProps, 'id'>) {
+export default function MovieCard({ title, thumbnailUrl, rating }: MovieCardProps) {
   return (
     <div className="group relative h-60 w-40 shrink-0 cursor-pointer overflow-hidden rounded-lg bg-netflix-black-lighter transition hover:z-50 hover:scale-110">
       {/* Image - using inline style for dynamic background */}

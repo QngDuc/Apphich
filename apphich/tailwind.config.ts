@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindScrollbarHide from "tailwind-scrollbar-hide";
 
 const config: Config = {
   content: [
@@ -10,7 +11,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Netflix Brand Colors
         netflix: {
           red: "#e50914",
           "red-dark": "#b81d13",
@@ -38,6 +38,8 @@ const config: Config = {
       backgroundImage: {
         "netflix-gradient": "linear-gradient(135deg, #e50914 0%, #b81d13 100%)",
         "netflix-overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 100%)",
+        "linear-to-br": "linear-gradient(to bottom right, rgba(229, 9, 20, 0.2), rgba(20, 20, 20, 0.85))",
+        "linear-to-t": "linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3), transparent)",
       },
       boxShadow: {
         "netflix-sm": "0 1px 2px rgba(0, 0, 0, 0.5)",
@@ -71,7 +73,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindScrollbarHide],
   darkMode: "class",
 };
 
